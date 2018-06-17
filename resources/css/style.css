@@ -39,6 +39,20 @@ header nav ul li a {
 .mobile {
   display: none;
 }
+@media only screen and (max-width:480px) {
+  header {justify-content: center;}
+  header .full {display: none;}
+  header .logo h2 {display: none;}
+  header .mobile {
+      display: inline-flex;
+  }
+  header .mobile img {height: 100%;}
+  header .mobile a {
+    padding-right: 1rem;
+  }
+
+
+}
 
 /*Content1*/
 .one {
@@ -60,6 +74,9 @@ header nav ul li a {
 
 }
 .one .learn {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 40%;
   height: 100%
 }
@@ -69,13 +86,39 @@ header nav ul li a {
 .one .learn h4 {
   font-size: 1.9rem;
 }
-.one .learn button {
-  width: 60%;
-  padding: 0.5rem 0;
-  background-color: hsl(0, 0%, 38%)
+.one .learn .button {
+  padding: 0.5rem 8rem;
+  background-color: hsl(0, 0%, 38%);
+  color:hsl(0, 0%, 100%);
 }
-.one .learn button a {
-  color:hsl(0, 0%, 100%)
+@media only screen and (max-width:480px) {
+  .one {flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 2rem;
+  }
+  .one .image-container {
+    width: 100%;
+    margin:0;
+  }
+  .one .learn {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .one .learn h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+  .one .learn h4 {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+  .one .learn .button {
+    padding: 0.5rem 5rem;
+    margin:1.5rem 1rem 2rem 1rem;
+}
 }
 /*Content2*/
 .two {
@@ -108,7 +151,38 @@ header nav ul li a {
 .two .side p{
   padding-left: 0;
 }
+.two .small {display: none;}
+@media only screen and (max-width:480px){
+  .two .image-container{
+    display: none;
+  }
+  .two .side {
+    display: none;
+  }
+  .two .small {
+    display: inline-flex;
+    flex-direction: column;
+    width:100%;
+  }
+  .two .small img{
+    max-height: 9.375rem;}
 
+  .two .small .info,.campus,.guest {
+    display:inline-flex;
+    flex-direction: column;
+    height: 14rem;
+    padding: 1rem 1rem 4rem 1rem;
+    align-items: flex-start;
+  }
+    .two .small .guest{
+      margin-bottom: 2rem;
+    }
+  .two .small img {
+    width: 100%;
+}
+  .two .small p{
+  padding-left: 0;}
+}
 /*Content3*/
 .three {
   display: flex;
@@ -120,30 +194,60 @@ header nav ul li a {
   flex-wrap: wrap;
   margin: 2rem 4.5rem;
 }
-.three .courses span {
+.three .courses div {
   border: 1px solid magenta;
-  width: 31%;
+  width: 30%;
   height: auto;
   padding-bottom: 1.5rem;
-
-
-}
-.software, .art, .data, .business {
-margin-right: 2rem;
-}
-.software,.art,.design {
+  margin-right: 2rem;
   margin-bottom: 2rem;
+
 }
-.three .courses span img{
+
+.three .courses div img{
   width: 100%;
   margin-bottom: 1rem;
 }
-.three .courses span h3 {
+.three .courses div h3 {
   padding:0.5rem 0;
 }
-.three .courses span h3,h5,p {
+.three .courses div h3,h5,p {
   padding-left: 1.5rem;
 }
+@media only screen and (max-width:480px) {
+.three .courses div img{
+  display: none;
+}
+.three .courses div h5{
+  display: none;
+}
+.three .courses div p{
+  display: none;
+}
+.three .courses {
+  flex-direction: column;
+  margin: 1rem 0rem 2rem 0rem;
+  padding: 1rem 0rem;
+  width: 100%;
+}
+  .three .courses div {
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 2rem;
+    padding-bottom: 1rem;
+
+  }
+.three .courses div h3 {
+padding: 1rem 0 1.5rem 1rem;
+margin: 0;
+}
+.three .courses .software,.art, .design,.data,.business {
+margin-bottom: 0.5rem;
+}
+}
+
+
 
 /*Content4*/
 .four{
@@ -153,7 +257,7 @@ margin-right: 2rem;
 .four .thetop {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width:60%;
 }
 .four .thetop h1 {
@@ -178,11 +282,11 @@ border:1px solid orange;
   height: auto;
   margin: 1rem;
 }
-.four .theside .fisma span {
+.four .theside .fisma div {
   width: 65%;
   border: 1px solid purple;
 }
-.four .theside .fisma  span p{
+.four .theside .fisma  div p{
   padding-left: 0;
 }
 .four .theside .thent img {
@@ -190,12 +294,42 @@ border:1px solid orange;
   height: auto;
   margin: 1rem;
 }
-.four .theside .thent span {
+.four .theside .thent div {
   width: 65%;
   border: 1px solid purple;
 }
-.four .theside .thent span p{
+.four .theside .thent div p{
   padding-left: 0;
+}
+@media only screen and (max-width:480px){
+ .four .theside {display: none;}
+ .four .thetop h3{
+   display: none;
+ }
+ .four .thetop p{
+   display: none;
+ }
+ .four .thetop{
+   width: 100%;
+   display: inline-flex;
+   flex-direction: column;
+   align-items: center;
+ }
+ .four .thetop h1{
+   margin-bottom: 1rem;
+ }
+ .four .thetop .thevideo {width: 100%;}
 }
 
 /*Footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  font-size: 0.725rem;
+}
+@media only screen and (max-width:480px) {
+  footer nav {
+    display: none;
+  }
+}
