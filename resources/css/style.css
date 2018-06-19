@@ -331,6 +331,7 @@ margin: 0;
 }
 .four .thetop .thevideo {
   margin: 0 1.5rem 1.5rem 1.5rem;
+  
 }
 .four .theside {
 width: 40%;
@@ -397,7 +398,9 @@ margin-top: 6.5rem;
  .four .thetop h1{
    margin-bottom: 1rem;
  }
- .four .thetop .thevideo {width: 100%;}
+ .four .thetop .thevideo {
+   width: 100%;
+  }
 }
 
 /*Footer*/
