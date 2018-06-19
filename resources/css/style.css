@@ -5,9 +5,6 @@ a {
 li {
   list-style-type: none;
 }
-header,.one,.two,.three,.four,footer {
-  border: 1px solid darkblue;
-}
 h1,h2,h4 {font-family: 'Fjalla One', sans-serif;}
 h3,h5,p {font-family: 'Fira Sans', sans-serif;}
 /*Header*/
@@ -46,7 +43,7 @@ header nav ul li a:hover {
 .mobile {
   display: none;
 }
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:980px) {
   header {justify-content: center;}
   header .full {display: none;}
   header .logo h2 {display: none;}
@@ -66,7 +63,6 @@ header .mobile a img:hover{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid black;
   background-color: #DDDDDD;
 }
 .one .image-container {
@@ -100,7 +96,7 @@ header .mobile a img:hover{
 }
 
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:980px) {
   .one {
       flex-direction: column;
       align-items: flex-start;
@@ -147,7 +143,7 @@ header .mobile a img:hover{
   width: 40%;
   margin:2rem 1.5rem;
 }
-.two .side .info,.campus,.guest {
+.two .info,.campus,.guest {
   display:inline-flex;
   height:12rem;
   align-items: center;
@@ -190,7 +186,7 @@ color:white;
   padding-left: 0;
 }
 .two .small {display: none;}
-@media only screen and (max-width:480px){
+@media only screen and (max-width:780px){
   .two .image-container{
     display: none;
   }
@@ -203,7 +199,8 @@ color:white;
     width:100%;
   }
   .two .small img{
-    max-height: 9.375rem;}
+    max-height: 9.375rem;
+    width: 100%;}
 
   .two .small .info,.campus,.guest {
     display:inline-flex;
@@ -215,9 +212,7 @@ color:white;
     .two .small .guest{
       margin-bottom: 2rem;
     }
-  .two .small img {
-    width: 100%;
-}
+
   .two .small p{
   padding-left: 0;}
 }
@@ -233,6 +228,7 @@ color:white;
 .three .courses {
   display: inline-flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 2rem 4.5rem;
 }
 .three .courses div {
@@ -274,8 +270,12 @@ color:white;
   font-size: 1rem;
 }
 
-
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:1140px){
+  .three .courses div {
+    width: 25%;
+}
+}
+@media only screen and (max-width:980px) {
 .three .courses div img{
   display: none;
 }
@@ -302,7 +302,7 @@ color:white;
     margin-right: 1rem;
   }
   .three .courses .software h3{
-    font-size: 1.25;
+    font-size: 1.5rem;
   }
 
 .three .courses div h3 {
@@ -310,6 +310,10 @@ padding: 1rem 0 1.5rem 1rem;
 margin: 0;
 }
 }
+@media only screen and (max-width:360px){
+.three .courses .software h3{ font-size: 1.40rem;}
+ }
+
 
 /*Content4*/
 .four{
@@ -376,7 +380,7 @@ margin-top: 6.5rem;
 .four .theside .thent div p{
   padding-left: 0;
 }
-@media only screen and (max-width:480px){
+@media only screen and (max-width:980px){
  .four .theside {display: none;}
  .four .thetop h3{
    display: none;
@@ -409,7 +413,7 @@ footer nav a:hover{
 
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:980px) {
   footer nav {
     display: none;
   }
