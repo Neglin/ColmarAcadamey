@@ -8,12 +8,15 @@ li {
 header,.one,.two,.three,.four,footer {
   border: 1px solid darkblue;
 }
+h1,h2,h4 {font-family: 'Fjalla One', sans-serif;}
+h3,h5,p {font-family: 'Fira Sans', sans-serif;}
 /*Header*/
 header{
   display: flex;
   justify-content: space-between;
   height: 4rem;
   align-items: center;
+  background-color: hsl(222, 48%, 48%);
 }
 header .logo {
   display: inline-flex;
@@ -22,19 +25,23 @@ header .logo img {
   margin-left: 1.5rem;
 }
 header .logo #word {
-  color: hsl(0, 0%, 47%);
+  color: hsl(0, 0%, 0%);
 }
 
 header nav ul {
   display: inline-flex;
   flex-direction: row;
   margin-right: 1.5rem;
+
 }
 header nav ul li {
   padding-right: 1rem;
 }
 header nav ul li a {
-  color: hsl(0, 0%, 38%);
+  color: hsl(0, 0%, 100%);
+}
+header nav ul li a:hover {
+  font-weight: bold;
 }
 .mobile {
   display: none;
@@ -50,28 +57,25 @@ header nav ul li a {
   header .mobile a {
     padding-right: 1rem;
   }
-
-
+header .mobile a img:hover{
+  outline: 1px solid white;
 }
-
+}
 /*Content1*/
 .one {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid black;
-
+  background-color: #DDDDDD;
 }
 .one .image-container {
   width: 60%;
   margin:2rem 1.5rem;
 }
 
-
 .one .image-container img{
   width:100%;
-
-
 }
 .one .learn {
   display: inline-flex;
@@ -91,8 +95,14 @@ header nav ul li a {
   background-color: hsl(0, 0%, 38%);
   color:hsl(0, 0%, 100%);
 }
+.one .learn .button:hover {
+  font-weight: bold;
+}
+
+
 @media only screen and (max-width:480px) {
-  .one {flex-direction: column;
+  .one {
+      flex-direction: column;
       align-items: flex-start;
       padding-bottom: 2rem;
   }
@@ -124,6 +134,7 @@ header nav ul li a {
 .two {
   display: flex;
   justify-content: space-between;
+
 }
 .two .image-container {
   width: 60%;
@@ -133,7 +144,6 @@ header nav ul li a {
   width:95%;
 }
 .two .side {
-  border: 1px solid purple;
   width: 40%;
   margin:2rem 1.5rem;
 }
@@ -141,8 +151,36 @@ header nav ul li a {
   display:inline-flex;
   height:12rem;
   align-items: center;
-  border: 1px dotted purple;
+  border: 1px solid black;
 }
+.two .side .info a{
+  color:black;
+}
+.two .side .info a:hover{
+  text-decoration: underline;
+}
+.two .side .campus a{
+  color:black;
+}
+.two .side .campus a:hover{
+  text-decoration: underline;
+}
+.two .side .guest {
+background-color: hsl(222, 48%, 48%);
+color:white;
+}
+.two .side .guest a {
+  color:white;
+}
+.two .side .guest a:hover {
+  text-decoration: underline;
+}
+.two .side .guest a:active {
+  color:black;
+  background-color: white;
+}
+
+
 .two .side img {
   width: 35%;
   height: auto;
@@ -188,19 +226,23 @@ header nav ul li a {
   display: flex;
   flex-direction:column;
   align-items: center;
+  background-color: #DDDDDD
 }
+.three .top h1{
+  font-weight: bolder;}
 .three .courses {
   display: inline-flex;
   flex-wrap: wrap;
   margin: 2rem 4.5rem;
 }
 .three .courses div {
-  border: 1px solid magenta;
   width: 30%;
   height: auto;
   padding-bottom: 1.5rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  background-color: hsl(245, 0%, 62%);
+
 
 }
 
@@ -211,9 +253,28 @@ header nav ul li a {
 .three .courses div h3 {
   padding:0.5rem 0;
 }
-.three .courses div h3,h5,p {
-  padding-left: 1.5rem;
+.three .courses div h3 a {
+  font-weight: bold;
+  color: hsl(0, 0%, 0%);
 }
+.three .courses div h3 a:hover {
+  text-decoration: underline;
+}
+.three .courses div h3,h5,h6 {
+  padding-left: 1.5rem;
+  font-weight: lighter;
+}
+.three .courses h3 {
+  font-size: 1.75rem;
+}
+.three .courses h5 {
+  font-size: 1.25rem;
+}
+.three .courses h6{
+  font-size: 1rem;
+}
+
+
 @media only screen and (max-width:480px) {
 .three .courses div img{
   display: none;
@@ -221,33 +282,34 @@ header nav ul li a {
 .three .courses div h5{
   display: none;
 }
-.three .courses div p{
+.three .courses div h6{
   display: none;
 }
 .three .courses {
   flex-direction: column;
-  margin: 1rem 0rem 2rem 0rem;
+  margin: 1rem 2rem 2rem 2rem;
   padding: 1rem 0rem;
   width: 100%;
 }
   .three .courses div {
     display: inline-flex;
     justify-content: flex-start;
-    width: 100%;
+    width: 90%;
     height: 2rem;
     padding-bottom: 1rem;
-
+    background-color: hsl(0, 0%, 100%);
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
+  .three .courses .software h3{
+    font-size: 1.25;
+  }
+
 .three .courses div h3 {
 padding: 1rem 0 1.5rem 1rem;
 margin: 0;
 }
-.three .courses .software,.art, .design,.data,.business {
-margin-bottom: 0.5rem;
 }
-}
-
-
 
 /*Content4*/
 .four{
@@ -269,13 +331,21 @@ margin-bottom: 0.5rem;
 .four .theside {
 width: 40%;
 margin-top: 6.5rem;
-border:1px solid orange;
+}
+.four .theside .fisma{
+  background-color:hsl(222, 48%, 48%);
+}
+.four .theside .fisma a{
+  color:hsl(0,0%,100%);
+}
+.four .theside .fisma a:hover{
+  color:hsl(0,0%,0%);
 }
 .four .theside .fisma,.thent{
   display: inline-flex;
   width: 100%;
   height: 9rem;
-  border: 1px solid green;
+  border: 1px solid black;
 }
 .four .theside .fisma img {
   width: 35%;
@@ -284,10 +354,16 @@ border:1px solid orange;
 }
 .four .theside .fisma div {
   width: 65%;
-  border: 1px solid purple;
 }
 .four .theside .fisma  div p{
   padding-left: 0;
+  color: hsl(0,0%,100%);
+}
+.four .theside .thent a{
+  color:hsl(0,0%,0%);
+}
+.four .theside .thent a:hover{
+  color:hsl(245,0%,62%);
 }
 .four .theside .thent img {
   width: 35%;
@@ -296,7 +372,6 @@ border:1px solid orange;
 }
 .four .theside .thent div {
   width: 65%;
-  border: 1px solid purple;
 }
 .four .theside .thent div p{
   padding-left: 0;
@@ -327,7 +402,13 @@ footer {
   justify-content: space-between;
   padding: 1rem 1.5rem;
   font-size: 0.725rem;
+  background-color: hsl(222, 48%, 48%);
 }
+footer nav a:hover{
+  text-decoration: underline;
+
+}
+
 @media only screen and (max-width:480px) {
   footer nav {
     display: none;
